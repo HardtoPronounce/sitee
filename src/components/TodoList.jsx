@@ -1,9 +1,11 @@
-import "./componentStyles/style1.css"
+import Todo from './Todo'
 
-function TodoList() {
+function TodoList({ todos }) {
     return (
-      <div>Hello World</div>
+      todos.map(todo => {
+        return <Todo key={todo} todo={todo} />
+      })
     )
   }
 
-export default Patrat;
+export default TodoList;
