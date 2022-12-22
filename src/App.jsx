@@ -1,12 +1,15 @@
-import Patrat from './components/Patrat'
+import TodoList from './components/TodoList'
 import './App.css';
+import { useState } from 'react';
 
 function App() {
-  let dim = [100, 250, 300, 200];
-  
   return (
     <div className="App">
-        {dim.map(e=>(<Patrat width={String(e)+"vw"}/>))}
+        <TodoList />
+        <input type="text"/>
+        <button>Add Todo</button>
+        <button>Clear Complete</button>
+        <div>0 left to do</div>
     </div>
   );
 }
