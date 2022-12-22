@@ -1,23 +1,12 @@
-import logo from './logo.svg';
+import Patrat from './components/Patrat'
 import './App.css';
 
 function App() {
+  let dim = [100, 250, 300, 200];
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        {dim.map(e=>(<Patrat width={String(e)+"vw"}/>))}
     </div>
   );
 }
